@@ -1,0 +1,358 @@
+{
+  "workflows": [
+    {
+      "id": "Shhade And Ariel Test ",
+      "workflow_id": "Shhade And Ariel Test ",
+      "description": "Shhade And Ariel Test",
+      "workflow_desc": "Shhade And Ariel Test",
+      "status": "active",
+      "priority": "high",
+      "estimated_duration": 240,
+      "total_stages": 525,
+      "created_date": "2025-08-01T08:30:00Z",
+      "updated_date": "2025-08-15T10:45:00Z"
+    },
+    {
+      "id": "WF-ASSEMBLY-001",
+      "workflow_id": "WF-ASSEMBLY-001",
+      "description": "Assembly line for engine components",
+      "workflow_desc": "Assembly line for engine components",
+      "status": "active",
+      "priority": "high",
+      "estimated_duration": 240,
+      "total_stages": 5,
+      "created_date": "2025-08-01T08:30:00Z",
+      "updated_date": "2025-08-15T10:45:00Z"
+    },
+    {
+      "id": "WF-INSPECTION-002",
+      "workflow_id": "WF-INSPECTION-002",
+      "description": "Quality inspection for finished goods",
+      "workflow_desc": "Quality inspection for finished goods",
+      "status": "draft",
+      "priority": "medium",
+      "estimated_duration": 90,
+      "total_stages": 3,
+      "created_date": "2025-08-05T09:15:00Z",
+      "updated_date": "2025-08-10T11:00:00Z"
+    },
+    {
+      "id": "WF-PACKAGING-003",
+      "workflow_id": "WF-PACKAGING-003",
+      "description": "Final packaging before shipment",
+      "workflow_desc": "Final packaging before shipment",
+      "status": "inactive",
+      "priority": "low",
+      "estimated_duration": 60,
+      "total_stages": 4,
+      "created_date": "2025-07-20T12:00:00Z",
+      "updated_date": "2025-08-01T14:30:00Z"
+    },
+    {
+      "id": "WF-MAINTENANCE-004",
+      "workflow_id": "WF-MAINTENANCE-004",
+      "description": "Preventive machine maintenance routine",
+      "workflow_desc": "Preventive machine maintenance routine",
+      "status": "active",
+      "priority": "critical",
+      "estimated_duration": 180,
+      "total_stages": 6,
+      "created_date": "2025-06-10T07:00:00Z",
+      "updated_date": "2025-08-20T16:00:00Z"
+    },
+    {
+      "id": "WF-TRAINING-005",
+      "workflow_id": "WF-TRAINING-005",
+      "description": "Onboarding training for new employees",
+      "workflow_desc": "Onboarding training for new employees",
+      "status": "draft",
+      "priority": "medium",
+      "estimated_duration": 300,
+      "total_stages": 8,
+      "created_date": "2025-08-12T13:45:00Z",
+      "updated_date": "2025-08-25T09:30:00Z"
+    }
+  ],
+  "stages": [
+    {
+      "id": "stage_001",
+      "name": "Material Inspection",
+      "description": "Inspect incoming raw materials for quality and compliance",
+      "stage_type": "inspection",
+      "iot_entity_id": "sensor_mat_001",
+      "created_date": "2024-08-01T09:00:00Z"
+    },
+    {
+      "id": "stage_002", 
+      "name": "Component Assembly",
+      "description": "Assemble components according to specifications",
+      "stage_type": "assembly",
+      "iot_entity_id": "robot_asm_001",
+      "created_date": "2024-08-01T09:15:00Z"
+    },
+    {
+      "id": "stage_003",
+      "name": "Quality Testing",
+      "description": "Perform quality tests on assembled products",
+      "stage_type": "testing",
+      "iot_entity_id": "test_bench_001",
+      "created_date": "2024-08-01T09:30:00Z"
+    },
+    {
+      "id": "stage_004",
+      "name": "Final Inspection",
+      "description": "Final quality inspection before packaging",
+      "stage_type": "inspection",
+      "iot_entity_id": "camera_insp_001",
+      "created_date": "2024-08-01T09:45:00Z"
+    },
+    {
+      "id": "stage_005",
+      "name": "Packaging",
+      "description": "Package products for shipment",
+      "stage_type": "packaging",
+      "iot_entity_id": "pack_machine_001",
+      "created_date": "2024-08-01T10:00:00Z"
+    },
+    {
+      "id": "stage_006",
+      "name": "Equipment Calibration",
+      "description": "Calibrate manufacturing equipment",
+      "stage_type": "maintenance",
+      "iot_entity_id": "calib_tool_001",
+      "created_date": "2024-08-01T10:15:00Z"
+    },
+    {
+      "id": "stage_007",
+      "name": "Inventory Count",
+      "description": "Count and verify inventory levels",
+      "stage_type": "inventory",
+      "iot_entity_id": "scanner_inv_001",
+      "created_date": "2024-08-01T10:30:00Z"
+    },
+    {
+      "id": "stage_008",
+      "name": "Data Collection",
+      "description": "Collect operational data from sensors",
+      "stage_type": "monitoring",
+      "iot_entity_id": "data_hub_001",
+      "created_date": "2024-08-01T10:45:00Z"
+    }
+  ],
+  "workflow_steps": [
+    {
+      "id": "step_001",
+      "workflow_id": "Shhade And Ariel Test ",
+      "stage_id": "stage_001",
+      "work_sequence": 1,
+      "created_date": "2025-08-01T08:30:00Z"
+    },
+    {
+      "id": "step_002",
+      "workflow_id": "Shhade And Ariel Test ",
+      "stage_id": "stage_003",
+      "work_sequence": 2,
+      "created_date": "2025-08-01T08:30:00Z"
+    },
+    {
+      "id": "step_003",
+      "workflow_id": "Shhade And Ariel Test ",
+      "stage_id": "stage_004",
+      "work_sequence": 3,
+      "created_date": "2025-08-01T08:30:00Z"
+    },
+    {
+      "id": "step_004",
+      "workflow_id": "WF-ASSEMBLY-001",
+      "stage_id": "stage_001",
+      "work_sequence": 1,
+      "created_date": "2025-08-01T08:30:00Z"
+    },
+    {
+      "id": "step_005",
+      "workflow_id": "WF-ASSEMBLY-001",
+      "stage_id": "stage_002",
+      "work_sequence": 2,
+      "created_date": "2025-08-01T08:30:00Z"
+    },
+    {
+      "id": "step_006",
+      "workflow_id": "WF-ASSEMBLY-001",
+      "stage_id": "stage_003",
+      "work_sequence": 3,
+      "created_date": "2025-08-01T08:30:00Z"
+    },
+    {
+      "id": "step_007",
+      "workflow_id": "WF-ASSEMBLY-001",
+      "stage_id": "stage_004",
+      "work_sequence": 4,
+      "created_date": "2025-08-01T08:30:00Z"
+    },
+    {
+      "id": "step_008",
+      "workflow_id": "WF-ASSEMBLY-001",
+      "stage_id": "stage_005",
+      "work_sequence": 5,
+      "created_date": "2025-08-01T08:30:00Z"
+    },
+    {
+      "id": "step_009",
+      "workflow_id": "WF-INSPECTION-002",
+      "stage_id": "stage_003",
+      "work_sequence": 1,
+      "created_date": "2025-08-05T09:15:00Z"
+    },
+    {
+      "id": "step_010",
+      "workflow_id": "WF-INSPECTION-002",
+      "stage_id": "stage_004",
+      "work_sequence": 2,
+      "created_date": "2025-08-05T09:15:00Z"
+    },
+    {
+      "id": "step_011",
+      "workflow_id": "WF-PACKAGING-003",
+      "stage_id": "stage_005",
+      "work_sequence": 1,
+      "created_date": "2025-07-20T12:00:00Z"
+    },
+    {
+      "id": "step_012",
+      "workflow_id": "WF-MAINTENANCE-004",
+      "stage_id": "stage_006",
+      "work_sequence": 1,
+      "created_date": "2025-06-10T07:00:00Z"
+    },
+    {
+      "id": "step_013",
+      "workflow_id": "WF-MAINTENANCE-004",
+      "stage_id": "stage_008",
+      "work_sequence": 2,
+      "created_date": "2025-06-10T07:00:00Z"
+    },
+    {
+      "id": "step_014",
+      "workflow_id": "WF-TRAINING-005",
+      "stage_id": "stage_008",
+      "work_sequence": 1,
+      "created_date": "2025-08-12T13:45:00Z"
+    }
+  ],
+  "workflow_executions": [
+    {
+      "id": "exec_001",
+      "workflow_id": "Shhade And Ariel Test ",
+      "execution_status": "completed",
+      "start_time": "2025-08-22T08:00:00Z",
+      "end_time": "2025-08-22T12:00:00Z",
+      "duration_minutes": 240,
+      "executed_by": "user_123",
+      "success_rate": 95.5,
+      "error_count": 2,
+      "warning_count": 5
+    },
+    {
+      "id": "exec_002",
+      "workflow_id": "WF-ASSEMBLY-001",
+      "execution_status": "running",
+      "start_time": "2025-09-02T14:00:00Z",
+      "end_time": null,
+      "duration_minutes": null,
+      "executed_by": "user_456",
+      "success_rate": null,
+      "error_count": 0,
+      "warning_count": 1
+    },
+    {
+      "id": "exec_003",
+      "workflow_id": "WF-ASSEMBLY-001",
+      "execution_status": "completed",
+      "start_time": "2025-09-01T06:00:00Z",
+      "end_time": "2025-09-01T10:00:00Z",
+      "duration_minutes": 240,
+      "executed_by": "user_789",
+      "success_rate": 98.2,
+      "error_count": 1,
+      "warning_count": 3
+    },
+    {
+      "id": "exec_004",
+      "workflow_id": "WF-INSPECTION-002",
+      "execution_status": "completed",
+      "start_time": "2025-09-02T16:00:00Z",
+      "end_time": "2025-09-02T17:30:00Z",
+      "duration_minutes": 90,
+      "executed_by": "user_101",
+      "success_rate": 88.5,
+      "error_count": 3,
+      "warning_count": 2
+    },
+    {
+      "id": "exec_005",
+      "workflow_id": "WF-MAINTENANCE-004",
+      "execution_status": "completed",
+      "start_time": "2025-09-02T07:00:00Z",
+      "end_time": "2025-09-02T10:00:00Z",
+      "duration_minutes": 180,
+      "executed_by": "user_202",
+      "success_rate": 100.0,
+      "error_count": 0,
+      "warning_count": 0
+    },
+    {
+      "id": "exec_006",
+      "workflow_id": "WF-MAINTENANCE-004",
+      "execution_status": "failed",
+      "start_time": "2025-09-01T07:30:00Z",
+      "end_time": "2025-09-01T09:00:00Z",
+      "duration_minutes": 90,
+      "executed_by": "user_303",
+      "success_rate": 45.8,
+      "error_count": 8,
+      "warning_count": 4
+    }
+  ],
+  "stage_parameters": [
+    {
+      "id": "param_001",
+      "stage_id": "stage_001",
+      "parameter_name": "temperature_threshold",
+      "parameter_value": "25.5",
+      "parameter_type": "number",
+      "unit": "celsius"
+    },
+    {
+      "id": "param_002",
+      "stage_id": "stage_001",
+      "parameter_name": "humidity_max",
+      "parameter_value": "60",
+      "parameter_type": "number",
+      "unit": "percentage"
+    },
+    {
+      "id": "param_003",
+      "stage_id": "stage_002",
+      "parameter_name": "torque_setting",
+      "parameter_value": "15.2",
+      "parameter_type": "number",
+      "unit": "nm"
+    },
+    {
+      "id": "param_004",
+      "stage_id": "stage_003",
+      "parameter_name": "test_duration",
+      "parameter_value": "120",
+      "parameter_type": "number",
+      "unit": "seconds"
+    },
+    {
+      "id": "param_005",
+      "stage_id": "stage_003",
+      "parameter_name": "pass_threshold",
+      "parameter_value": "95",
+      "parameter_type": "number",
+      "unit": "percentage"
+    }
+  ]
+}

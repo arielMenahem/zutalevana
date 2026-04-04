@@ -1,0 +1,47 @@
+.logo-img {
+    cursor: pointer;
+}
+.logo{
+    cursor: pointer;
+    font-size: 20px;
+    color: #000000;
+    padding: 0 0;
+}
+.logo .sublogo{
+    display: inline;
+    color: #000000;
+    margin-left: 10px;
+    font-size: 16px;
+}
+.longText div {
+    white-space: normal;
+}
+.sprite-btn{
+    background-image: url('../images/Lotus_Icons.png');
+    background-repeat: no-repeat;
+}
+.help-btn{
+    background: url('../images/info.png') no-repeat 0 0;
+}
+.excel-btn{ background-position: 0 -96px;}
+.upload-xls-btn{ background-position: 0 -314px;}
+.print-btn{ background-position: 0 -64px;}
+.clip-btn{ background-position: 0 0;}
+.refresh-btn{ background-position: 0 -32px;}
+.exceptions-btn{ background-position: 0 -128px;}
+.analysys-btn{ background-position: -4px -294px; width:36px; height:20px;margin:0!important; position: absolute; right:3px}
+.x-btn-icon-text-left .x-btn-icon-el.new-package-btn{ background-position: -3px -194px;}
+.x-btn-icon-text-left .x-btn-icon-el.open-period-button{ background-position: 0 -224px;}
+.x-btn-icon-text-left .x-btn-icon-el.closed-period-button{ background-position: 0 -160px;}
+.x-toolbar-default {
+    padding: 0 0 0 0;
+}
+.main-toolbar-label{
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    font-size: 20px;
+    font-weight: bold;
+    border-right: 1px  solid #C9C9CA;
+    border-left: 1px  solid #FDFDFD;
+}

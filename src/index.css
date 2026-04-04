@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Assistant", "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #1c1c1e;
+    color: #fff;
+  }
+
+  h1, h2, h3 {
+    font-family: "Frank Ruhl Libre", serif;
+  }
+}
+
+@layer utilities {
+  /* Shapes fade in after their float delay */
+  .shape-visible {
+    animation-fill-mode: both;
+    opacity: 1 !important;
+  }
+
+  /* Gold glow on focus inputs */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.25);
+  }
+
+  /* Smooth section transitions */
+  section {
+    position: relative;
+  }
+}
+
+/* ── Scrollbar ────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1c1c1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A84C55;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A84C;
+}
+
+/* ── Selection ────────────────── */
+::selection {
+  background: rgba(201, 168, 76, 0.35);
+  color: #fff;
+}
+
