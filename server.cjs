@@ -12,7 +12,7 @@ app.use(cors({ origin: process.env.CLIENT_ORIGIN || '*' }));
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: true },
+  ssl: process.env.DATABASE_URL ? { rejectUnauthorized: false } : false,
 });
 
 const transporter = nodemailer.createTransport({
