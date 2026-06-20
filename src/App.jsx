@@ -403,7 +403,7 @@ export default function App() {
 
   /* gallery images */
   const galleryImages = [
-    { src: "/gallery/event-1.jpg", alt: t("gallery.event_1"), caption: t("gallery.event_1") },
+    { src: "/gallery/zuta.png",    alt: t("gallery.event_1"), caption: t("gallery.event_1") },
     { src: "/gallery/event-2.jpg", alt: t("gallery.event_2"), caption: t("gallery.event_2") },
     { src: "/gallery/event-3.jpg", alt: t("gallery.event_3"), caption: t("gallery.event_3") },
     { src: "/gallery/event-4.jpg", alt: t("gallery.event_1"), caption: t("gallery.event_1") },
