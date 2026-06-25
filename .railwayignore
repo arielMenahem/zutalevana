@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+.DS_Store
+*.log
+css
+app
+mock-data
+tvai-hatzaphon-landing.instructions.md
