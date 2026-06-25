@@ -120,7 +120,6 @@ function GalleryModal({ open, onClose, images, startIndex, t }) {
             className="w-full h-full object-cover"
           />
         </div>
-        <p className="text-white text-center font-medium">{images[idx].caption}</p>
         <div className="flex gap-2">
           {images.map((_, i) => (
             <button
@@ -403,19 +402,19 @@ export default function App() {
 
   /* gallery images */
   const galleryImages = [
-    { src: "/gallery/zuta.png",    alt: t("gallery.event_1"), caption: t("gallery.event_1") },
-    { src: "/gallery/event-2.jpg", alt: t("gallery.event_2"), caption: t("gallery.event_2") },
-    { src: "/gallery/event-3.jpg", alt: t("gallery.event_3"), caption: t("gallery.event_3") },
-    { src: "/gallery/event-4.jpg", alt: t("gallery.event_1"), caption: t("gallery.event_1") },
-    { src: "/gallery/event-5.jpg", alt: t("gallery.event_2"), caption: t("gallery.event_2") },
-    { src: "/gallery/event-6.jpg", alt: t("gallery.event_3"), caption: t("gallery.event_3") },
+    { src: "/gallery/zuta.png",              alt: t("gallery.event_1"), caption: t("gallery.event_1") },
+    { src: "/gallery/IMG_7948.jpg",          alt: t("gallery.event_2"), caption: t("gallery.event_2") },
+    { src: "/gallery/IMG_7944.jpg",          alt: t("gallery.event_3"), caption: t("gallery.event_3") },
+    { src: "/gallery/IMG_5754.jpg",          alt: t("gallery.event_1"), caption: t("gallery.event_1") },
+    { src: "/gallery/IMG_4306.jpg",          alt: t("gallery.event_2"), caption: t("gallery.event_2") },
+    { src: "/gallery/IMG_9637.jpg",          alt: t("gallery.event_3"), caption: t("gallery.event_3") },
   ];
 
   /* service tabs config */
   const tabs = [
-    { key: "dairy", label: t("services.tab_dairy"), text: t("services.dairy_text"), imgAlt: t("services.dairy_img_alt"), img: "/services/dairy.jpg" },
-    { key: "meat",  label: t("services.tab_meat"),  text: t("services.meat_text"),  imgAlt: t("services.meat_img_alt"),  img: "/services/meat.jpg"  },
-    { key: "corporate", label: t("services.tab_corporate"), text: t("services.corporate_text"), imgAlt: t("services.corporate_img_alt"), img: "/services/corporate.jpg" },
+    { key: "dairy",     label: t("services.tab_dairy"),     text: t("services.dairy_text"),     imgAlt: t("services.dairy_img_alt"),     img: "/gallery/IMG_5180.jpg"  },
+    { key: "meat",      label: t("services.tab_meat"),      text: t("services.meat_text"),      imgAlt: t("services.meat_img_alt"),      img: "/gallery/IMG_8236.jpg"  },
+    { key: "corporate", label: t("services.tab_corporate"), text: t("services.corporate_text"), imgAlt: t("services.corporate_img_alt"), img: "/gallery/IMG_6997.jpg"  },
   ];
   const activeService = tabs.find((tb) => tb.key === activeTab);
 
@@ -472,7 +471,7 @@ export default function App() {
       >
         <div className="absolute inset-0 z-0">
           <img
-            src="/hero.jpg"
+            src="/gallery/IMG_7953.jpg"
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover opacity-60"
@@ -530,7 +529,7 @@ export default function App() {
             </div>
             <div className="aspect-[4/3] bg-amber-50 rounded-2xl overflow-hidden border border-amber-100">
               <img
-                src="/about/talia.jpg"
+                src="/gallery/1000003947.jpeg"
                 alt={t("about.img_alt_talia")}
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -545,9 +544,9 @@ export default function App() {
           {/* Three images */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { src: "/about/talia.jpg", alt: t("about.img_alt_talia") },
-              { src: "/about/staff.jpg", alt: t("about.img_alt_staff") },
-              { src: "/about/buffet.jpg", alt: t("about.img_alt_buffet") },
+              { src: "/gallery/1000003947.jpeg",         alt: t("about.img_alt_talia")  },
+              { src: "/gallery/IMG_20170511_091225.jpg", alt: t("about.img_alt_staff")  },
+              { src: "/gallery/IMG_4327.jpg",            alt: t("about.img_alt_buffet") },
             ].map((img, i) => (
               <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden bg-amber-50 border border-amber-100">
                 <img
@@ -595,11 +594,7 @@ export default function App() {
                     e.target.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center text-amber-200 text-4xl bg-amber-50">🍽️</div>`;
                   }}
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all flex items-end p-3">
-                  <p className="text-white text-xs font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
-                    {img.caption}
-                  </p>
-                </div>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all" />
               </button>
             ))}
           </div>
