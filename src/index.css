@@ -3,12 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --cream:       #FDF8F3;
+    --cream-dark:  #F5EFE6;
+    --gold:        #C8920D;
+    --charcoal:    #1a1614;
+  }
+
   * {
     box-sizing: border-box;
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 72px;
   }
 
   body {
@@ -16,13 +24,67 @@
     font-family: "Open Sans Hebrew", "Assistant", "Segoe UI", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #F8F9FA;
+    background-color: var(--cream);
     color: #1c1917;
   }
 
   h1, h2, h3 {
     font-family: "Frank Ruhl Libre", serif;
+    letter-spacing: -0.025em;
   }
+}
+
+/* ── Section gold divider ────────────────────── */
+.section-divider {
+  height: 3px;
+  width: 64px;
+  background: linear-gradient(90deg, #fbbf24 0%, #d97706 60%, #92400e 100%);
+  border-radius: 9999px;
+  display: block;
+}
+
+/* ── Card lift on hover ──────────────────────── */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 40px rgba(180, 83, 9, 0.1);
+}
+
+/* ── Nav link underline animation ────────────── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #d97706;
+  transform: scaleX(0);
+  transition: transform 0.22s ease;
+  transform-origin: center;
+  border-radius: 9999px;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+/* ── Gallery warm overlay on hover ───────────── */
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(120, 53, 15, 0.35) 0%, transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.gallery-item:hover::after {
+  opacity: 1;
 }
 
 /* ── High contrast mode ───────────────────────── */
@@ -30,7 +92,6 @@ html.theme-high-contrast body {
   background: #fff !important;
   color: #000 !important;
 }
-
 html.theme-high-contrast a,
 html.theme-high-contrast button,
 html.theme-high-contrast p,
@@ -38,7 +99,6 @@ html.theme-high-contrast span,
 html.theme-high-contrast li {
   color: #000 !important;
 }
-
 html.theme-high-contrast .bg-amber-600,
 html.theme-high-contrast .bg-amber-700 {
   background: #000 !important;
@@ -65,17 +125,26 @@ textarea:focus-visible {
 input:focus,
 select:focus,
 textarea:focus {
-  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.15);
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.18);
 }
 
-/* ── Scrollbar ────────────────────────────────── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: #f5f5f4; }
-::-webkit-scrollbar-thumb { background: #d97706aa; border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: #d97706; }
+/* ── Custom scrollbar ─────────────────────────── */
+::-webkit-scrollbar              { width: 5px; }
+::-webkit-scrollbar-track        { background: var(--cream); }
+::-webkit-scrollbar-thumb        { background: linear-gradient(to bottom, #fcd34d, #d97706); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover  { background: #b45309; }
 
-/* ── Selection ─────────────────────────────────── */
+/* ── Text selection ───────────────────────────── */
 ::selection {
-  background: rgba(217, 119, 6, 0.25);
+  background: rgba(217, 119, 6, 0.22);
   color: #1c1917;
 }
+
+/* ── Hero content fade-in animation ──────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-fade-1 { animation: fadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both; }
+.hero-fade-2 { animation: fadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.28s both; }
+.hero-fade-3 { animation: fadeUp 0.85s cubic-bezier(0.22, 1, 0.36, 1) 0.46s both; }

@@ -227,7 +227,7 @@ function LeadForm({ t, lang, context = "General Inquiry", onSuccess }) {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full bg-amber-600 hover:bg-amber-700 disabled:opacity-60 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-amber-200 text-base"
+        className="w-full bg-gradient-to-b from-amber-500 to-amber-700 hover:from-amber-400 hover:to-amber-600 disabled:opacity-60 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg shadow-amber-300/40 hover:shadow-xl hover:shadow-amber-300/50 hover:-translate-y-0.5 text-base"
       >
         {status === "loading" ? "..." : t("form.submit")}
       </button>
@@ -248,7 +248,7 @@ function TestimonialSlider({ t, lang }) {
   const current = items[idx];
 
   return (
-    <div className="mt-12 bg-amber-50 border border-amber-200 rounded-2xl p-6 md:p-8">
+    <div className="mt-12 bg-gradient-to-br from-amber-50 via-white to-amber-50/30 border border-amber-200/60 rounded-2xl p-6 md:p-8 shadow-md shadow-amber-100/50">
       <div className="text-amber-600 text-4xl font-serif mb-3 opacity-60">"</div>
       <p className="text-stone-700 italic leading-relaxed mb-4">{current.quote}</p>
       <div className="flex items-center justify-between flex-wrap gap-2">
@@ -419,13 +419,13 @@ export default function App() {
   const activeService = tabs.find((tb) => tb.key === activeTab);
 
   return (
-    <div dir={dir} lang={lang} className="font-sans bg-[#F8F9FA] text-stone-800 overflow-x-hidden">
+    <div dir={dir} lang={lang} className="font-sans bg-[#FDF8F3] text-stone-800 overflow-x-hidden">
 
       {/* ══ STICKY NAVBAR ══════════════════════════════ */}
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          headerScrolled ? "bg-white/98 shadow-md" : "bg-white/90"
-        } backdrop-blur-md border-b border-stone-100`}
+          headerScrolled ? "bg-white shadow-sm shadow-stone-200/60" : "bg-white/92"
+        } backdrop-blur-md border-b border-stone-200/50`}
       >
         <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
           {/* Logo */}
@@ -439,10 +439,10 @@ export default function App() {
 
           {/* Nav */}
           <nav className="hidden md:flex items-center gap-7 text-sm font-semibold text-stone-600" aria-label="Main navigation">
-            <a href="#about"   className="hover:text-amber-700 transition-colors focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 rounded">{t("nav.about")}</a>
-            <a href="#gallery" className="hover:text-amber-700 transition-colors focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 rounded">{t("nav.gallery")}</a>
-            <a href="#services"className="hover:text-amber-700 transition-colors focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 rounded">{t("nav.services")}</a>
-            <a href="#contact" className="hover:text-amber-700 transition-colors focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 rounded">{t("nav.contact")}</a>
+            <a href="#about"   className="nav-link hover:text-amber-700 transition-colors focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 rounded">{t("nav.about")}</a>
+            <a href="#gallery" className="nav-link hover:text-amber-700 transition-colors focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 rounded">{t("nav.gallery")}</a>
+            <a href="#services"className="nav-link hover:text-amber-700 transition-colors focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 rounded">{t("nav.services")}</a>
+            <a href="#contact" className="nav-link hover:text-amber-700 transition-colors focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 rounded">{t("nav.contact")}</a>
           </nav>
 
           {/* Lang toggle + CTA */}
@@ -456,7 +456,7 @@ export default function App() {
             </button>
             <button
               onClick={() => setContactModal(true)}
-              className="bg-amber-600 hover:bg-amber-700 text-white text-sm font-bold px-4 py-2 rounded-lg transition-all shadow focus:outline-2 focus:outline-amber-400 focus:outline-offset-2"
+              className="bg-amber-600 hover:bg-amber-500 text-white text-sm font-bold px-4 py-2 rounded-lg transition-all shadow hover:shadow-md hover:shadow-amber-200 focus:outline-2 focus:outline-amber-400 focus:outline-offset-2"
             >
               {t("nav.contact")}
             </button>
@@ -474,31 +474,31 @@ export default function App() {
             src="/gallery/IMG_7953.jpg"
             alt=""
             aria-hidden="true"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-45"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/5 to-black/80" />
         </div>
 
         <div className="relative z-10 text-center px-5 max-w-3xl mx-auto">
-          <p className="text-amber-300 text-sm font-bold tracking-widest uppercase mb-4 opacity-90">
+          <p className="hero-fade-1 inline-block text-amber-300 text-xs font-bold tracking-[0.22em] uppercase mb-5 opacity-90 border border-amber-400/30 rounded-full px-4 py-1.5 bg-white/5 backdrop-blur-sm">
             {lang === "he" ? "קייטרינג גלילי בוטיק" : "Galilean Boutique Catering"}
           </p>
-          <h1 className="text-5xl md:text-7xl font-serif font-black text-white mb-5 leading-tight">
+          <h1 className="hero-fade-2 text-5xl md:text-7xl font-serif font-black text-white mb-6 leading-[1.05] tracking-tight">
             {t("hero.title")}
           </h1>
-          <p className="text-lg md:text-xl text-white/85 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="hero-fade-3 text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
             {t("hero.subtitle")}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="hero-fade-3 flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={scrollToAbout}
-              className="bg-white text-stone-800 font-black text-base px-8 py-4 rounded-xl hover:bg-amber-50 transition-all shadow-xl focus:outline-2 focus:outline-amber-400 focus:outline-offset-2"
+              className="bg-white text-stone-800 font-black text-base px-8 py-4 rounded-xl hover:bg-amber-50 hover:-translate-y-0.5 hover:shadow-2xl transition-all shadow-xl focus:outline-2 focus:outline-amber-400 focus:outline-offset-2"
             >
               {t("hero.cta_about")}
             </button>
             <button
               onClick={() => setContactModal(true)}
-              className="bg-amber-600 hover:bg-amber-700 text-white font-black text-base px-8 py-4 rounded-xl transition-all shadow-xl focus:outline-2 focus:outline-white focus:outline-offset-2"
+              className="bg-amber-600 hover:bg-amber-500 text-white font-black text-base px-8 py-4 rounded-xl transition-all shadow-xl border border-amber-400/30 hover:-translate-y-0.5 hover:shadow-2xl focus:outline-2 focus:outline-white focus:outline-offset-2"
             >
               {t("hero.cta_talk")}
             </button>
@@ -514,7 +514,7 @@ export default function App() {
       </section>
 
       {/* ══ ABOUT ══════════════════════════════════════ */}
-      <section id="about" ref={aboutRef} className="py-24 bg-white">
+      <section id="about" ref={aboutRef} className="py-28 bg-white">
         <div className="max-w-5xl mx-auto px-5">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-14">
             <div>
@@ -524,7 +524,7 @@ export default function App() {
               <h2 className="text-4xl md:text-5xl font-serif font-black text-stone-800 mb-4">
                 {t("about.title")}
               </h2>
-              <div className="w-14 h-0.5 bg-amber-500 mb-6" />
+              <div className="section-divider mb-6" />
               <p className="text-stone-600 leading-relaxed text-base">{t("about.text")}</p>
             </div>
             <div className="aspect-[4/3] bg-amber-50 rounded-2xl overflow-hidden border border-amber-100">
@@ -565,7 +565,7 @@ export default function App() {
       </section>
 
       {/* ══ GALLERY ════════════════════════════════════ */}
-      <section id="gallery" className="py-24 bg-[#F8F9FA]">
+      <section id="gallery" className="py-28 bg-[#FDF8F3]">
         <div className="max-w-5xl mx-auto px-5">
           <div className="text-center mb-12">
             <p className="text-amber-600 text-sm font-bold tracking-widest uppercase mb-3">
@@ -574,7 +574,7 @@ export default function App() {
             <h2 className="text-4xl md:text-5xl font-serif font-black text-stone-800 mb-2">
               {t("gallery.title")}
             </h2>
-            <div className="w-14 h-0.5 bg-amber-500 mx-auto" />
+            <div className="section-divider mx-auto" />
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -582,7 +582,7 @@ export default function App() {
               <button
                 key={i}
                 onClick={() => setGalleryModal({ open: true, index: i })}
-                className="group relative aspect-[4/3] rounded-xl overflow-hidden bg-amber-50 border border-amber-100 hover:shadow-xl transition-all focus:outline-2 focus:outline-amber-600 focus:outline-offset-2"
+                className="gallery-item group relative aspect-[4/3] rounded-xl overflow-hidden bg-amber-50 border border-amber-100/70 hover:shadow-2xl hover:shadow-amber-200/60 hover:-translate-y-1 transition-all duration-300 focus:outline-2 focus:outline-amber-600 focus:outline-offset-2"
                 aria-label={img.caption}
               >
                 <img
@@ -602,7 +602,7 @@ export default function App() {
       </section>
 
       {/* ══ SERVICES ════════════════════════════════════ */}
-      <section id="services" className="py-24 bg-white">
+      <section id="services" className="py-28 bg-white">
         <div className="max-w-5xl mx-auto px-5">
           <div className="text-center mb-12">
             <p className="text-amber-600 text-sm font-bold tracking-widest uppercase mb-3">
@@ -611,7 +611,7 @@ export default function App() {
             <h2 className="text-4xl md:text-5xl font-serif font-black text-stone-800 mb-2">
               {t("services.title")}
             </h2>
-            <div className="w-14 h-0.5 bg-amber-500 mx-auto" />
+            <div className="section-divider mx-auto" />
           </div>
 
           {/* Tab bar */}
@@ -628,8 +628,8 @@ export default function App() {
                 onClick={() => setActiveTab(tb.key)}
                 className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 ${
                   activeTab === tb.key
-                    ? "bg-amber-600 text-white shadow-md shadow-amber-200"
-                    : "bg-stone-100 text-stone-600 hover:bg-amber-100 hover:text-amber-700"
+                    ? "bg-gradient-to-b from-amber-500 to-amber-700 text-white shadow-lg shadow-amber-300/50"
+                    : "bg-stone-100/80 text-stone-600 hover:bg-amber-100 hover:text-amber-800 border border-transparent hover:border-amber-200"
                 }`}
               >
                 {tb.label}
@@ -659,7 +659,7 @@ export default function App() {
                 <p className="text-stone-600 leading-relaxed text-base">{activeService.text}</p>
                 <button
                   onClick={() => setContactModal(true)}
-                  className="mt-6 inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-bold px-6 py-3 rounded-xl transition-all shadow focus:outline-2 focus:outline-amber-400 focus:outline-offset-2"
+                  className="mt-6 inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white font-bold px-6 py-3 rounded-xl transition-all shadow-md shadow-amber-200 hover:shadow-lg hover:shadow-amber-300/60 hover:-translate-y-0.5 focus:outline-2 focus:outline-amber-400 focus:outline-offset-2"
                 >
                   {t("nav.contact")}
                 </button>
@@ -673,7 +673,7 @@ export default function App() {
       </section>
 
       {/* ══ CONTACT FORM ════════════════════════════════ */}
-      <section id="contact" className="py-24 bg-[#F8F9FA]">
+      <section id="contact" className="py-28 bg-[#FDF8F3]">
         <div className="max-w-lg mx-auto px-5">
           <div className="text-center mb-10">
             <p className="text-amber-600 text-sm font-bold tracking-widest uppercase mb-3">
@@ -682,16 +682,16 @@ export default function App() {
             <h2 className="text-4xl md:text-5xl font-serif font-black text-stone-800 mb-2">
               {t("nav.contact")}
             </h2>
-            <div className="w-14 h-0.5 bg-amber-500 mx-auto" />
+            <div className="section-divider mx-auto" />
           </div>
-          <div className="bg-white rounded-2xl shadow-lg border border-stone-100 p-6 md:p-8">
+          <div className="bg-white rounded-2xl shadow-xl shadow-amber-100/50 border border-amber-100/70 p-6 md:p-8">
             <LeadForm t={t} lang={lang} context="General Inquiry" />
           </div>
         </div>
       </section>
 
       {/* ══ FOOTER ══════════════════════════════════════ */}
-      <footer className="bg-stone-900 text-stone-300 py-10 border-t border-stone-800">
+      <footer className="bg-stone-900 text-stone-300 py-12 border-t-2 border-amber-800/30">
         <div className="max-w-5xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm">{t("footer.rights")}</p>
           <div className="flex items-center gap-6 text-sm">
