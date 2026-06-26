@@ -402,15 +402,55 @@ export default function App() {
 
   const cld = (id) => `https://res.cloudinary.com/dzb7fucda/image/upload/q_auto,f_auto/zutalevana/${id}`;
 
-  /* gallery images */
+  /* gallery images — all Cloudinary uploads */
   const galleryImages = [
-    { src: cld("IMG_7713.heic"),              alt: t("gallery.event_1"), caption: t("gallery.event_1") },
-    { src: cld("IMG_7948.heic"),              alt: t("gallery.event_2"), caption: t("gallery.event_2") },
-    { src: cld("IMG_7944.heic"),              alt: t("gallery.event_3"), caption: t("gallery.event_3") },
-    { src: cld("IMG_5754.heic"),              alt: t("gallery.event_1"), caption: t("gallery.event_1") },
-    { src: cld("IMG_4306.heic"),              alt: t("gallery.event_2"), caption: t("gallery.event_2") },
-    { src: cld("IMG_9637.heic"),              alt: t("gallery.event_3"), caption: t("gallery.event_3") },
-  ];
+    "1000003947.jpg","1000003962.jpg","1000013332.jpg",
+    "1327D0FD-D46C-497E-8FD4-04027237C6B3.jpg","13536.jpg",
+    "20210713_081022.jpg","20210911_140711.jpg","20210917_130744.jpg",
+    "20210925_074724.jpg","20211015_080144.jpg",
+    "27210.jpg","27211.jpg",
+    "36D6B3D7-97B5-4E69-8169-1F23ED4D76BF.jpg",
+    "639E8C62-4F15-4767-BAE7-AC82D242643E.jpg",
+    "70ED480C-8DBB-4964-A14A-FA304D2FAFB2.jpg",
+    "E1988344-570B-4C93-9A9D-B51BB5F4E5FB.jpg",
+    "E82C13EA-C360-47C3-80AC-9710C4847E44.jpg",
+    "F616305F-E26F-4344-8C9B-249868EAD885.jpg",
+    "FB_IMG_1495737330606.jpg",
+    "IMG_1454.jpg","IMG_1478.heic","IMG_1517.heic","IMG_1520.heic",
+    "IMG_20160318_135509.jpg","IMG_20170511_091225.jpg",
+    "IMG_20170511_092128.jpg","IMG_20170511_092618.jpg",
+    "IMG_20170810_144106.jpg",
+    "IMG_2273.heic","IMG_3780.jpg","IMG_3781.jpg",
+    "IMG_3974.heic","IMG_3982.heic",
+    "IMG_4303.heic","IMG_4306.heic","IMG_4308.heic","IMG_4327.heic",
+    "IMG_4385.heic","IMG_4414.heic","IMG_4415.heic","IMG_4421.jpg",
+    "IMG_4881.jpg","IMG_4883.jpg",
+    "IMG_4911.heic","IMG_4934.heic",
+    "IMG_5051.heic","IMG_5098.heic","IMG_5112.heic",
+    "IMG_5138.heic","IMG_5140.heic","IMG_5180.heic","IMG_5283.jpg",
+    "IMG_5754.heic","IMG_5758.heic","IMG_5761.heic",
+    "IMG_6223.heic","IMG_6226.heic",
+    "IMG_6337.heic","IMG_6342.heic","IMG_6344.heic",
+    "IMG_6351.heic","IMG_6354.heic","IMG_6363.heic",
+    "IMG_6364.heic","IMG_6365.heic","IMG_6478.heic",
+    "IMG_6582.heic","IMG_6584.heic",
+    "IMG_6867.heic","IMG_6870.heic","IMG_6997.heic",
+    "IMG_7052.heic","IMG_7186.heic",
+    "IMG_7247.heic","IMG_7251.heic","IMG_7252.heic","IMG_7253.heic",
+    "IMG_7713.heic","IMG_7900.heic","IMG_7935.heic",
+    "IMG_7944.heic","IMG_7946.heic","IMG_7948.heic",
+    "IMG_7953.heic","IMG_7954.heic","IMG_7963.jpg",
+    "IMG_8123.jpg","IMG_8124.jpg","IMG_8126.jpg","IMG_8128.jpg",
+    "IMG_8179.heic","IMG_8184.jpg","IMG_8187.jpg","IMG_8188.jpg","IMG_8194.jpg",
+    "IMG_8236.heic","IMG_8246.heic","IMG_8255.heic",
+    "IMG_9259.heic","IMG_9262.heic","IMG_9630.heic","IMG_9637.heic",
+    "Screenshot_20210714-213038_Facebook.jpg",
+    "Screenshot_20210714-213209_Facebook.jpg",
+    "Screenshot_20210724-215729_Instagram.jpg",
+    "Screenshot_20210724-220413_Instagram.jpg",
+    "Screenshot_20210922-201458_Pinterest.jpg",
+    "Screenshot_20210922-201625_Pinterest.jpg",
+  ].map((id) => ({ src: cld(id), alt: t("gallery.event_1"), caption: t("gallery.event_1") }));
 
   /* service tabs config */
   const tabs = [
