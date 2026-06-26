@@ -400,21 +400,23 @@ export default function App() {
   const scrollToAbout = () =>
     aboutRef.current?.scrollIntoView({ behavior: "smooth" });
 
+  const cld = (id) => `https://res.cloudinary.com/dzb7fucda/image/upload/q_auto,f_auto/zutalevana/${id}`;
+
   /* gallery images */
   const galleryImages = [
-    { src: "/gallery/zuta.png",              alt: t("gallery.event_1"), caption: t("gallery.event_1") },
-    { src: "/gallery/IMG_7948.jpg",          alt: t("gallery.event_2"), caption: t("gallery.event_2") },
-    { src: "/gallery/IMG_7944.jpg",          alt: t("gallery.event_3"), caption: t("gallery.event_3") },
-    { src: "/gallery/IMG_5754.jpg",          alt: t("gallery.event_1"), caption: t("gallery.event_1") },
-    { src: "/gallery/IMG_4306.jpg",          alt: t("gallery.event_2"), caption: t("gallery.event_2") },
-    { src: "/gallery/IMG_9637.jpg",          alt: t("gallery.event_3"), caption: t("gallery.event_3") },
+    { src: cld("IMG_7713.heic"),              alt: t("gallery.event_1"), caption: t("gallery.event_1") },
+    { src: cld("IMG_7948.heic"),              alt: t("gallery.event_2"), caption: t("gallery.event_2") },
+    { src: cld("IMG_7944.heic"),              alt: t("gallery.event_3"), caption: t("gallery.event_3") },
+    { src: cld("IMG_5754.heic"),              alt: t("gallery.event_1"), caption: t("gallery.event_1") },
+    { src: cld("IMG_4306.heic"),              alt: t("gallery.event_2"), caption: t("gallery.event_2") },
+    { src: cld("IMG_9637.heic"),              alt: t("gallery.event_3"), caption: t("gallery.event_3") },
   ];
 
   /* service tabs config */
   const tabs = [
-    { key: "dairy",     label: t("services.tab_dairy"),     text: t("services.dairy_text"),     imgAlt: t("services.dairy_img_alt"),     img: "/gallery/IMG_5180.jpg"  },
-    { key: "meat",      label: t("services.tab_meat"),      text: t("services.meat_text"),      imgAlt: t("services.meat_img_alt"),      img: "/gallery/IMG_8236.jpg"  },
-    { key: "corporate", label: t("services.tab_corporate"), text: t("services.corporate_text"), imgAlt: t("services.corporate_img_alt"), img: "/gallery/IMG_6997.jpg"  },
+    { key: "dairy",     label: t("services.tab_dairy"),     text: t("services.dairy_text"),     imgAlt: t("services.dairy_img_alt"),     img: cld("IMG_5180.heic") },
+    { key: "meat",      label: t("services.tab_meat"),      text: t("services.meat_text"),      imgAlt: t("services.meat_img_alt"),      img: cld("IMG_8236.heic") },
+    { key: "corporate", label: t("services.tab_corporate"), text: t("services.corporate_text"), imgAlt: t("services.corporate_img_alt"), img: cld("IMG_6997.heic") },
   ];
   const activeService = tabs.find((tb) => tb.key === activeTab);
 
@@ -430,7 +432,7 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between gap-4">
           {/* Logo */}
           <a href="#hero" className="flex items-center gap-3 flex-shrink-0 focus:outline-2 focus:outline-amber-600 focus:outline-offset-2 rounded">
-            <img src="/logo.png" alt="זוטה לבנה" className="h-10 w-auto" onError={(e) => {
+            <img src="https://res.cloudinary.com/dzb7fucda/image/upload/q_auto,f_auto/zutalevana/logo.png" alt="זוטה לבנה" className="h-10 w-auto" onError={(e) => {
               e.target.style.display = "none";
               e.target.nextSibling.style.display = "block";
             }} />
@@ -471,7 +473,7 @@ export default function App() {
       >
         <div className="absolute inset-0 z-0">
           <img
-            src="/gallery/IMG_7953.jpg"
+            src={cld("IMG_7953.heic")}
             alt=""
             aria-hidden="true"
             className="w-full h-full object-cover opacity-45"
@@ -529,7 +531,7 @@ export default function App() {
             </div>
             <div className="aspect-[4/3] bg-amber-50 rounded-2xl overflow-hidden border border-amber-100">
               <img
-                src="/gallery/1000003947.jpeg"
+                src={cld("1000003947.jpg")}
                 alt={t("about.img_alt_talia")}
                 className="w-full h-full object-cover"
                 onError={(e) => {
@@ -544,9 +546,9 @@ export default function App() {
           {/* Three images */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
-              { src: "/gallery/1000003947.jpeg",         alt: t("about.img_alt_talia")  },
-              { src: "/gallery/IMG_20170511_091225.jpg", alt: t("about.img_alt_staff")  },
-              { src: "/gallery/IMG_4327.jpg",            alt: t("about.img_alt_buffet") },
+              { src: cld("1000003947.jpg"),              alt: t("about.img_alt_talia")  },
+              { src: cld("IMG_20170511_091225.jpg"),     alt: t("about.img_alt_staff")  },
+              { src: cld("IMG_4327.heic"),               alt: t("about.img_alt_buffet") },
             ].map((img, i) => (
               <div key={i} className="aspect-[4/3] rounded-2xl overflow-hidden bg-amber-50 border border-amber-100">
                 <img
