@@ -1,15 +1,14 @@
-# Blank Project
+# זוטה לבנה – Zuta Levana
 
-A blank Vite + React project template.
+אתר קייטרינג זוטה לבנה – חוויה קולינרית גלילית של השפית טליה הלטמן.
+
+## About
+
+Zuta Levana is a Galilean culinary catering service by chef Talia Haltman, specializing in weddings, bar mitzvahs, and corporate events.
+
+Built with Vite + React, Tailwind CSS, and an Express/PostgreSQL backend.
 
 ## Getting Started
-
-This is a starter template with minimal configuration. It includes:
-
-- Vite + React
-- Tailwind CSS
-
-## Running the app
 
 ```bash
 npm install
@@ -20,4 +19,10 @@ npm run dev
 
 ```bash
 npm run build
+```
+
+## Running the server
+
+```bash
+npm start
 ```

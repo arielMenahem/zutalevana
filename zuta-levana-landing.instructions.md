@@ -1,4 +1,4 @@
-# Landing Page Specification: תוואי הצפון (Tavei HaTzafon)
+# Landing Page Specification: זוטה לבנה (Zuta Levana)
 
 ---
 
