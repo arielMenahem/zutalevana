@@ -355,7 +355,7 @@ function AccessibilityWidget({ t, dir }) {
 function WhatsAppButton() {
   return (
     <a
-      href="https://api.whatsapp.com/send?phone=972545696903&text=%D7%94%D7%99%2C%20%D7%96%D7%95%20%D7%98%D7%9C%D7%99%D7%94"
+      href="https://api.whatsapp.com/send?phone=972545696903&text=%D7%94%D7%99%20%D7%98%D7%9C%D7%99%D7%94%2C"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-400 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-all focus:outline-2 focus:outline-amber-600 focus:outline-offset-2"
@@ -750,7 +750,7 @@ export default function App() {
               {t("footer.accessibility")}
             </button>
             <a
-              href="https://api.whatsapp.com/send?phone=972545696903&text=%D7%94%D7%99%2C%20%D7%96%D7%95%20%D7%98%D7%9C%D7%99%D7%94"
+              href="https://api.whatsapp.com/send?phone=972545696903&text=%D7%94%D7%99%20%D7%98%D7%9C%D7%99%D7%94%2C"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-green-400 hover:text-green-300 transition-colors focus:outline-2 focus:outline-amber-400 focus:outline-offset-2"
